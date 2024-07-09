@@ -1,0 +1,38 @@
+.slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  .slide-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: calc(250px * 14); /* Number of images * image width * 2 (for the duplicated set) */
+  }
+  
+  .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px; /* Perspective for the 3D effect */
+  }
+  
+  .slide img {
+    display: block;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .slide:hover img {
+    transform: rotateY(360deg); /* Flip the image on hover */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7)); /* Move by the width of one set of images */
+    }
+  }
+  

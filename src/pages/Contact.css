@@ -1,0 +1,176 @@
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    animation: fadeIn 2s ease-in; /* Apply the fade-in animation */
+  }
+  
+  .contact-container h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    padding: 4rem 1rem;
+    background-color: url('../assets/Blue.png'); /* Adjusted path */
+    border-radius: 8px;
+    overflow: hidden; /* Ensure the overflow is hidden to prevent overflow issues */
+    z-index: 1;
+  }
+  
+  .contact-container h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/Blue.png'); /* Adjusted path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Add transition for smooth zoom effect */
+    transform-origin: center; /* Set the transform origin to center */
+    transform: scale(1); /* Initial scale */
+  }
+  
+  .contact-container h1:hover::before {
+    transform: scale(1.1); /* Zoom in effect on hover */
+  }
+  
+  .form-image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+    font-size: 1rem;
+  }
+  
+  .contact-form label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1.5px solid #12273c;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.875rem;
+  }
+  
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1.5px solid #12273c;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.875rem;
+    resize: vertical;
+   
+  }
+  
+  .contact-form button {
+    width: 40%;
+    padding: 0.5rem;
+    background-color: #12273c;
+    color: #dddddd;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 4px;
+    align-self: center;
+    margin-top: 1rem;
+  }
+  
+  .contact-details {
+    text-align: left;
+    font-size: 0.875rem;
+    color: #12273c;
+  }
+  
+  .contact-details p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  .contact-details .contact-title {
+    font-size: 2rem;
+    font-weight: bold;
+    
+  }
+  
+  .map-container {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 2rem;
+    outline: none;
+  }
+  
+  .map-container:focus,
+  .map-container *:focus {
+    outline: none;
+    border: none;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1.5px solid #12273c;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.875rem;
+  }
+  
+  button[type="submit"] {
+    width: auto;
+    padding: 0.5rem 2rem;
+    background-color: #12273c;
+    color: #dddddd;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+  }

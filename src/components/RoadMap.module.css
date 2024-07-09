@@ -1,0 +1,253 @@
+.timeline {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #ddd;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 0; /* Ensure it's behind the timeline items */
+}
+
+.timelineItem {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+  z-index: 1; /* Ensure content is above the timeline */
+}
+
+.timelineItem::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 2; /* Ensure point is above content */
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  color: black;
+  z-index: 1; /* Ensure content is above the point */
+}
+
+.point {
+  position: absolute;
+  right: -20px; /* Adjust position based on your design */
+  top: 10px; /* Adjust top position to align with the timeline point */
+  width: 40px; /* Adjust width based on your design */
+  height: 40px; /* Adjust height based on your design */
+  background-color: transparent;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  z-index: 3; /* Ensure point is above other elements */
+}
+
+.point:hover::after {
+  content: attr(data-tooltip); /* Show tooltip text on hover */
+  position: absolute;
+  background-color: #12283c; /* Background color of tooltip */
+  color: white; /* Text color of tooltip */
+  font-size: 14px; /* Font size of tooltip */
+  padding: 8px 12px; /* Padding of tooltip */
+  border-radius: 4px; /* Border radius of tooltip */
+  white-space: nowrap; /* Prevent tooltip text from wrapping */
+  bottom: 100%; /* Position above the timeline point */
+  left: 50%; /* Center horizontally relative to point */
+  transform: translateX(-50%); /* Center horizontally relative to point */
+  opacity: 1; /* Show tooltip on hover */
+  pointer-events: none; /* Ensure tooltip does not block hover of point */
+}
+
+.timeline {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #ddd;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 0; /* Ensure it's behind the timeline items */
+}
+
+.timelineItem {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+  z-index: 1; /* Ensure content is above the timeline */
+}
+
+.timelineItem::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid rgb(251, 251, 6);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 2; /* Ensure point is above content */
+}
+.timelineItem.right::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: -17px;
+  background-color: white;
+  border: 4px solid rgb(251, 251, 6);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 2; /* Ensure point is above content */
+}
+.left {
+  left: -80px;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #12283c;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #12283c;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left:30px;
+  border: medium solid #12283c;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #12283c transparent transparent;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: #12283c;
+  position: relative;
+  border-radius: 6px;
+  color: #fff;
+  z-index: 1; /* Ensure content is above the point */
+}
+
+.point {
+  position: absolute;
+  right: -20px; /* Adjust position based on your design */
+  top: 10px; /* Adjust top position to align with the timeline point */
+  width: 40px; /* Adjust width based on your design */
+  height: 40px; /* Adjust height based on your design */
+  background-color: transparent;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  z-index: 3; /* Ensure point is above other elements */
+}
+
+.point:hover::after {
+  content: attr(data-tooltip); /* Show tooltip text on hover */
+  position: absolute;
+  background-color: #12283c; /* Background color of tooltip */
+  color: white; /* Text color of tooltip */
+  font-size: 14px; /* Font size of tooltip */
+  padding: 8px 12px; /* Padding of tooltip */
+  border-radius: 4px; /* Border radius of tooltip */
+  white-space: nowrap; /* Prevent tooltip text from wrapping */
+  bottom: 100%; /* Position above the timeline point */
+  left: 50%; /* Center horizontally relative to point */
+  transform: translateX(-50%); /* Center horizontally relative to point */
+  opacity: 1; /* Show tooltip on hover */
+  pointer-events: none; /* Ensure tooltip does not block hover of point */
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timelineItem {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timelineItem::before {
+    left: 60px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  .right {
+    left: 0%;
+  }
+}
